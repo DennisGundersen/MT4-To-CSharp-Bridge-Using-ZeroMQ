@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MQL\Files\" />
-    <Folder Include="MQL\Indicators\" />
+    <Folder Include="MQL4\Files\" />
+    <Folder Include="MQL4\Indicators\" />
   </ItemGroup>
 
   <ItemGroup>

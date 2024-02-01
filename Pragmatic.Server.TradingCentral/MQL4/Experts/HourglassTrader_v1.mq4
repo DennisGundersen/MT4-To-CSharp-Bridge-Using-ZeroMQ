@@ -245,7 +245,7 @@ bool TestRegisterHourglassAccountOnServer()
 	FillHourglassAccountRegistrationDTO(registrationDTO); // Collect data and fill in all the variables
 	HourglassAccountRegistrationResultDTO responseDTO;
 
-   PrintFormat("Now calling RegisterHourglassAccountOnServer with AccountNumber{%d} and AccountName{%s} was created", registrationDTO.accountNumber, registrationDTO.accountName);
+	PrintFormat("Now calling RegisterHourglassAccountOnServer with AccountNumber{%d} and AccountName{%s} was created", registrationDTO.accountNumber, registrationDTO.accountName);
 	RegisterHourglassAccountOnServer(responseDTO, registrationDTO);
 	PrintFormat("Returned to TestRegisterHourglassAccountOnServer(). Round complete!!!");
 	return true;
@@ -319,7 +319,7 @@ bool RegisterHourglassAccountOnServer(HourglassAccountRegistrationResultDTO &res
 		registrationDTO.Serialize(payload, i); //serialize the HourglassAccountRegistrationDTO class into the buffer
 		
 		// Send the payload to the TradingCentral
-		//PrintFormat("Now calling TradingCentral with payload and response object");
+		PrintFormat("Now calling TradingCentral with payload and response object");
 		bool r = CommSendCommand(response, payload);
 		if(r)
 		{
@@ -340,7 +340,7 @@ bool RegisterHourglassAccountOnServer(HourglassAccountRegistrationResultDTO &res
 				i = 0; //will start after status in response[0]
 				//PrintFormat("Response object successfully received from TradingCentral. Trying to deserialize...");
 				resultDTO.Deserialize(response, i);
-				//PrintFormat("Response object successfully deserialized");
+				PrintFormat("Response object successfully deserialized");
 				//endregion
 				return true;
 			}
@@ -363,7 +363,7 @@ bool RegisterHourglassAccountOnServer(HourglassAccountRegistrationResultDTO &res
 
 int TestRegisterHourglassTradesOnServer(bool mock = false, int mockOrders = 0)
 {
-   //PrintFormat("Starting TestRegisterHourglassTradesOnServer()");
+	PrintFormat("Starting TestRegisterHourglassTradesOnServer()");
 	OrderDTO orders[];
 	ChangeOrderDTO changeOrders[];
 
@@ -393,7 +393,7 @@ int TestRegisterHourglassTradesOnServer(bool mock = false, int mockOrders = 0)
 		{
 			if(mock)
 			{
-			   PrintFormat("Creating mock order");
+				PrintFormat("Creating mock order");
 				orders[j].MockThis(j);
 				j++;
 			}
@@ -406,7 +406,7 @@ int TestRegisterHourglassTradesOnServer(bool mock = false, int mockOrders = 0)
 			}
 		}
 		
-      //PrintFormat("Calling RegisterHourglassTradesOnServer(changeOrders, orders, ask, bid, balance, equity)");
+		//PrintFormat("Calling RegisterHourglassTradesOnServer(changeOrders, orders, ask, bid, balance, equity)");
 		bool ok = RegisterHourglassTradesOnServer(changeOrders, orders, ask, bid, balance, equity);
 		if(ok)
 		{
@@ -456,7 +456,7 @@ bool RegisterHourglassTradesOnServer(ChangeOrderDTO& result[], OrderDTO& orders[
 		payload[++i] = DoubleToString(balance);
 		payload[++i] = DoubleToString(equity);
 		
-		//PrintFormat("Now calling TradingCentral with payload and commandName: RegisterHourglassTrades");
+		PrintFormat("Now calling TradingCentral with payload and commandName: RegisterHourglassTrades");
 		bool r = CommSendCommand(response, payload);
 		if(r)
 		{
@@ -479,7 +479,7 @@ bool RegisterHourglassTradesOnServer(ChangeOrderDTO& result[], OrderDTO& orders[
 					result[j].Deserialize(response, i);
 				}
 				//endregion
-            //PrintFormat("Response object is deserialized into array of ChangeOrderDTO");
+				PrintFormat("Response object is deserialized into array of ChangeOrderDTO");
 				return true;
 			}
 			else
@@ -512,7 +512,7 @@ bool TestGetHourglassAccountOverviewOnServer()
 
 bool GetHourglassAccountOverviewOnServer(HourglassAccountOverviewDTO &responseDTO, int accountId)
 {
-	//Print("Running GetHourglassAccountOverviewOnServer(HourglassAccountOverviewDTO &responseDTO, int accountId).");
+	Print("Running GetHourglassAccountOverviewOnServer(HourglassAccountOverviewDTO &responseDTO, int accountId).");
 
 	const string commandName = "GetHourglassAccountOverview";
 	string payload[];       //send buffer
@@ -526,7 +526,7 @@ bool GetHourglassAccountOverviewOnServer(HourglassAccountOverviewDTO &responseDT
 		payload[i++] = IntegerToString(accountId);
 		
 		// Send the payload to the TradingCentral
-		//PrintFormat("Now calling TradingCentraL with payload and commandName: GetHourglassAccountOverview");
+		PrintFormat("Now calling TradingCentraL with payload and commandName: GetHourglassAccountOverview");
 		bool r = CommSendCommand(response, payload);
 		if(r)
 		{
@@ -548,7 +548,7 @@ bool GetHourglassAccountOverviewOnServer(HourglassAccountOverviewDTO &responseDT
 				i = 0; //will start after status in response[0]
 				responseDTO.Deserialize(response, i);
 				//PrintFormat("HourglassAccountOverviewDTO test - Bal: %s, Eq: %s, BottomRate: %s", DoubleToString(responseDTO.Balance, 2), DoubleToString(responseDTO.Equity,2), DoubleToString(responseDTO.BottomRate,4));
-				//PrintFormat("HourglassAccountOverviewDTO successfully deserialized.");
+				PrintFormat("HourglassAccountOverviewDTO successfully deserialized.");
 				//endregion
 				return true;
 			}

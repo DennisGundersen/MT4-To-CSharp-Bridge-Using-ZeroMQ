@@ -22,11 +22,11 @@ response.getData() is a way to access returned value from server.
 
 ## Server part
 Solution is divided into 4 projects.
-- Pragmatic.Server.TradingCentral is a simple CLI acting as the server and exposing C# methods as defined in `Adapters/MethodAdapters.cs`
-- Pragmatic.Common.Entities holds the example classes as well at examples for deserializing/serializing DTO from / to the EA
-- Pragmatic.Strategy.Hourglass.BusinessLogic is a dummy business layer
-- Pragmatic.Strategy.Hourglass.Client is a simple CLI acting as test against the server.
-- (HourglassTrader_v1 is a simple EA calling the server (sends and receives serialized dummy data))
+- `Pragmatic.Server.TradingCentral` is a simple CLI acting as the server and exposing C# methods as defined in `Adapters/MethodAdapters.cs`
+- `Pragmatic.Common.Entities` holds the example classes as well at examples for deserializing/serializing DTO from / to the EA
+- `Pragmatic.Strategy.Hourglass.BusinessLogic` is a dummy business layer
+- `Pragmatic.Strategy.Hourglass.Client` is a simple CLI acting as test against the server.
+- (`HourglassTrader_v1` is a simple EA calling the server (sends and receives serialized dummy data))
 
 ### Defining commands
 To execute commands from external libraries (which could be even without source code - managed dll) there's an adapter used.

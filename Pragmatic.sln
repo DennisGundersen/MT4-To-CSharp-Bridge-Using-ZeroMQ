@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Pragmatic.Tools.SSDT", "Pragmatic.Tools.SSDT\Pragmatic.Tools.SSDT.sqlproj", "{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pragmatic.Common.Entities", "Pragmatic.Common.Entities\Pragmatic.Common.Entities.csproj", "{B4CA2CE8-F3F7-47B7-BECA-A4F6E95DBDDE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pragmatic.Server.TradingCentral", "Pragmatic.Server.TradingCentral\Pragmatic.Server.TradingCentral.csproj", "{85B44350-A57A-4817-934C-1B915BF256A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pragmatic.Strategy.Hourglass.BusinessLogic", "Pragmatic.Strategy.Hourglass.BusinessLogic\Pragmatic.Strategy.Hourglass.BusinessLogic.csproj", "{ED44C5CA-8A46-48AF-AA8C-7FCA5561B054}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pragmatic.Strategy.Hourglass.Client", "Pragmatic.Strategy.Hourglass.Client\Pragmatic.Strategy.Hourglass.Client.csproj", "{E7B86DB0-023F-4D2A-8FEA-9337396ED566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8BC303-A20A-4E6C-9D93-1B41C82C827C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B4CA2CE8-F3F7-47B7-BECA-A4F6E95DBDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CA2CE8-F3F7-47B7-BECA-A4F6E95DBDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CA2CE8-F3F7-47B7-BECA-A4F6E95DBDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CA2CE8-F3F7-47B7-BECA-A4F6E95DBDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B44350-A57A-4817-934C-1B915BF256A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B44350-A57A-4817-934C-1B915BF256A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B44350-A57A-4817-934C-1B915BF256A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B44350-A57A-4817-934C-1B915BF256A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED44C5CA-8A46-48AF-AA8C-7FCA5561B054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED44C5CA-8A46-48AF-AA8C-7FCA5561B054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED44C5CA-8A46-48AF-AA8C-7FCA5561B054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED44C5CA-8A46-48AF-AA8C-7FCA5561B054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B86DB0-023F-4D2A-8FEA-9337396ED566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B86DB0-023F-4D2A-8FEA-9337396ED566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B86DB0-023F-4D2A-8FEA-9337396ED566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B86DB0-023F-4D2A-8FEA-9337396ED566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2128FEC3-30A1-417C-8641-45DAFEE52F15}
+	EndGlobalSection
+EndGlobal
